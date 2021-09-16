@@ -1,0 +1,175 @@
+/*    font-family: 'Big Shoulders Display', cursive;
+
+    font-family: 'Lexend Deca', sans-serif;*/
+
+
+    /*presets*/
+
+:root {
+--Bright-orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+
+--Transparent-white /*(paragraphs)*/: hsla(0, 0%, 100%, 0.75);
+--Very-light-gray /*(background, headings, buttons)*/: hsl(0, 0%, 95%);
+}
+
+body {
+    background-color: var(--Very-light-gray);
+    height: 1500px;
+}
+
+
+/*card pattern*/
+
+.content_pattern {
+    height: 440px;
+    text-align: left;
+    padding-left: 3rem;
+}
+
+
+
+.content_pattern .pattern_heading {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    color: var(--Very-light-gray);
+    font-size: 36px;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+
+.content_pattern .pattern_description{
+    color: var(--Transparent-white);
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.6;
+    font-weight: 400 thin;
+    font-size: 15px;
+    padding-right: 3rem;
+    
+}
+
+.content_pattern .pattern_image {
+    margin: 3rem 0 2.5rem 0;
+}
+
+.content_pattern .pattern_button {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    border: none;
+    border-color: unset;
+    border-radius: 30px;
+    padding: 0.8rem 2rem 0.8rem 2rem;
+    margin-top: 2rem;
+    font-weight: 700;
+}
+
+
+
+.content_pattern .pattern_button:hover {
+    cursor: pointer;
+    border: solid 2px;
+    border-color: var(--Very-light-gray);
+    background-color: transparent;
+    color: var(--Very-light-gray);
+}
+
+
+
+
+
+
+/*box definition*/
+
+main {
+    width: 330px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.navigation_box {
+    display: flex;
+    flex-direction: column;
+    padding-top: 130vh;
+}
+
+
+
+/*componests style*/
+
+/*Sedan*/
+
+.sedan_div {
+    background-color: var(--Bright-orange);
+    border-radius: 10px 10px 0 0;
+}
+
+.sedan_button {
+    color: var(--Bright-orange);
+}
+
+/*suv*/
+
+.suv_div {
+    background-color: var(--Dark-cyan);
+}
+
+.suv_button {
+    color: var(--Dark-cyan);
+}
+
+/*luxury*/
+
+.luxury_div {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 0 10px 10px;
+}
+
+.luxury_button {
+    color: var(--Very-dark-cyan);
+}
+
+
+/*attribution*/
+
+.attribution {
+    margin-top: 7px;
+}
+
+@media(min-width: 1440px) {
+    body {
+        height: unset;
+    }
+
+    main {
+        width: 930px;
+        height: 500px;
+
+    }
+    .navigation_box {
+        display: flex;
+        flex-direction: row;
+        padding-top: unset;
+    }
+
+    .content_pattern {
+        width: 310px;
+        height: 500px;
+    }
+
+    .content_pattern .pattern_button {
+        margin-top: 5.5rem;
+    }
+
+    .sedan_div {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .luxury_div {
+        border-radius: 0 10px 10px 0;
+    }
+}
